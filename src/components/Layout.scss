@@ -1,0 +1,15 @@
+@import "../scss/main";
+
+.layout__container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  // border: 1.6rem white solid;
+  padding: 1.6rem;
+  overflow: hidden;
+  .children__container {
+    width: 100%;
+    background: $beige;
+    overflow: auto;
+  }
+}

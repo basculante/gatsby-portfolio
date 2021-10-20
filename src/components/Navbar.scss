@@ -1,0 +1,102 @@
+@import "../scss/main";
+
+.menu {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  width: 24rem;
+  height: 100%;
+  background: $beige;
+  font-family: $font-gpkn;
+  .menu__item-socials {
+    margin-top: 4rem;
+  }
+  .menu__item {
+    width: 100%;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    // border-bottom: 0.4rem solid $black;
+    box-shadow: 0 -1px var(--color-border);
+    &:last-child {
+      box-shadow: 0 1px var(--color-border), 0 -1px var(--color-border);
+    }
+    .menu__item-link {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $black;
+      sup {
+        margin-right: 0.8rem;
+        font-size: 1.6rem;
+      }
+    }
+    //Reveal marquee animation on menu item hover
+    &:hover > .marquee {
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .marquee {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: fit-content;
+      height: 100%;
+      pointer-events: none;
+      background: $black;
+      opacity: 0;
+      // transform: translate3d(0, 101%, 0);
+      .marquee__inner-wrap {
+        height: 100%;
+        width: 100%;
+        // transform: translate3d(0, -101%, 0);
+        .marquee__inner {
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          display: flex;
+          position: relative;
+          animation: marquee 5s linear infinite;
+          will-change: transform;
+        }
+        @keyframes marquee {
+          100% {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+      }
+    }
+    //Make even menu items black background;
+    &:nth-child(2n) {
+      .marquee {
+        background: $gold;
+        span {
+          color: $orange-red;
+        }
+      }
+    }
+    .menu__item-link,
+    .marquee span {
+      white-space: nowrap;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      font-weight: 600;
+      padding: 0 0.8rem;
+    }
+    .marquee span {
+      font-family: $font-cocomat;
+      text-align: center;
+      color: $green;
+      font-weight: 400;
+    }
+    .marquee.social {
+      background: white;
+    }
+    .marquee.social span {
+      color: $blue;
+    }
+  }
+}

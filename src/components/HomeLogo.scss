@@ -1,0 +1,44 @@
+@import "../scss/main";
+
+.logo__wrapper {
+  .logo__container {
+    height: 32rem;
+    width: 32rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 0.8rem;
+    position: relative;
+    z-index: 100;
+    .logo__black-bar {
+      height: 100%;
+      width: 5.6rem;
+      background: $black;
+      &.image {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+    .logo__profile__picture {
+      margin-top: 0;
+      transform: translate3d(0%, 20%, 0);
+      pointer-events: none;
+    }
+  }
+  .logo__title {
+    h2 {
+      text-transform: uppercase;
+      font-family: $font-gpkn;
+      font-size: 3.2rem;
+      color: $green;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+    .job-title {
+      color: $orange-red;
+    }
+  }
+}
