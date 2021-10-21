@@ -5,7 +5,7 @@ import "./work.scss";
 
 const Work = () => {
   return (
-    <Layout>
+    <Layout pageTitle="Work">
       <div className="work-container">
         <section>
           <h2>Professional</h2>
@@ -14,6 +14,7 @@ const Work = () => {
               <a href="https://app.voicegain.ai">
                 Try one of Voicegain's applications!
               </a>
+              <p>Explore one of Voicegain's speech-to-text platforms.</p>
             </li>
             <li className="work-list__item">
               <a href="https://analytics.voicegain.ai">

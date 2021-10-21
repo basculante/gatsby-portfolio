@@ -7,12 +7,14 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 0.8rem;
-    position: relative;
-    z-index: 100;
     .logo__black-bar {
       height: 100%;
       width: 5.6rem;
       background: $black;
+      //Mobile view
+      @include respond(phone) {
+        width: 5rem;
+      }
       &.image {
         overflow: hidden;
         display: flex;
@@ -28,17 +30,15 @@
     }
   }
   .logo__title {
-    h2 {
+    h1 {
       text-transform: uppercase;
-      font-family: $font-gpkn;
-      font-size: 3.2rem;
       color: $green;
     }
     p {
       font-size: 1.4rem;
     }
     .job-title {
-      color: $orange-red;
+      color: $blue;
     }
   }
 }

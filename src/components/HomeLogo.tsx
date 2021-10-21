@@ -38,10 +38,10 @@ const HomeLogo = () => {
         <div className="logo__black-bar" />
       </div>
       <section className="logo__title">
-        <h2>victor joh</h2>
+        <h1>victor joh</h1>
         <p>
-          <span className="job-title">Frontend Software Engineer</span> / React
-          / Typescript
+          <b className="job-title">Frontend Software Engineer</b> / React /
+          Typescript
         </p>
       </section>
     </div>

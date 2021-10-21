@@ -3,13 +3,20 @@
 .layout__container {
   height: 100vh;
   width: 100%;
-  display: flex;
-  // border: 1.6rem white solid;
-  padding: 1.6rem;
-  overflow: hidden;
+  padding-top: 1.6rem;
+  overflow: auto;
   .children__container {
-    width: 100%;
-    background: $beige;
-    overflow: auto;
+    min-height: 100%;
+    width: calc(100% - 24rem);
+    margin-left: 24rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.6rem;
+    //Mobile view
+    @include respond(phone) {
+      width: 100%; //Full screen width on mobile (no sidebar)
+      margin-left: 0; //No sidebar on mobile;
+      padding: 1.6rem;
+    }
   }
 }

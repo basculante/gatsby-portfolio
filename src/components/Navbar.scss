@@ -1,13 +1,20 @@
 @import "../scss/main";
 
 .menu {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+  position: fixed;
   width: 24rem;
   height: 100%;
-  background: $beige;
   font-family: $font-gpkn;
+  overflow: hidden;
+  z-index: $z-index-middle;
+  background: white;
+
+  //Mobile view
+  @include respond(phone) {
+    position: fixed;
+    width: 100%; //Full page menu
+    transform: translateX(-100%);
+  }
   .menu__item-socials {
     margin-top: 4rem;
   }
@@ -15,17 +22,10 @@
     width: 100%;
     cursor: default;
     position: relative;
-    overflow: hidden;
-    // border-bottom: 0.4rem solid $black;
-    box-shadow: 0 -1px var(--color-border);
-    &:last-child {
-      box-shadow: 0 1px var(--color-border), 0 -1px var(--color-border);
-    }
     .menu__item-link {
-      display: block;
-      position: relative;
-      cursor: pointer;
-      text-decoration: none;
+      // display: inline-block;
+      // cursor: pointer;
+      // text-decoration: none;
       text-transform: uppercase;
       color: $black;
       sup {
@@ -59,12 +59,18 @@
           align-items: center;
           display: flex;
           position: relative;
-          animation: marquee 5s linear infinite;
+          animation: marquee 10s linear infinite;
           will-change: transform;
+          &.email {
+            animation: marquee 30s linear infinite;
+          }
         }
         @keyframes marquee {
-          100% {
-            transform: translate3d(-50%, 0, 0);
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
           }
         }
       }
@@ -85,6 +91,10 @@
       line-height: 1.2;
       font-weight: 600;
       padding: 0 0.8rem;
+      //Mobile view
+      @include respond(phone) {
+        font-size: 4rem;
+      }
     }
     .marquee span {
       font-family: $font-cocomat;

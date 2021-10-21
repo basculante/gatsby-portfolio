@@ -1,0 +1,15 @@
+@import "../scss/main";
+
+.resume__container {
+  padding: 1.6rem;
+  max-width: 72rem;
+  a {
+    font-family: $font-gpkn;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+  .resume-img {
+    margin-top: 0.8rem;
+  }
+}
