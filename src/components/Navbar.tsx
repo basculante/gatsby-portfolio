@@ -1,30 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-import { AnimationControls, motion } from "framer-motion";
 
-import "./Navbar.scss";
-
-interface INavbarProps {
-  mobileMenuControls: AnimationControls;
-  toggleMenu: () => void;
-}
-
-const Navbar = ({ mobileMenuControls, toggleMenu }: INavbarProps) => {
-  const mobileMenu = {
-    visible: { x: "0", opacity: 1 },
-    hidden: { x: "-100%" },
-  };
+const Navbar = () => {
   return (
-    <motion.nav
-      className="menu"
-      initial={false}
-      animate={mobileMenuControls}
-      variants={mobileMenu}
-      transition={{ type: "tween" }}
-    >
+    <nav className="menu">
       <ul>
         <li className="menu__item" id="home-menu">
-          <Link to="/" className="menu__item-link" onClick={() => toggleMenu()}>
+          <Link to="/" className="menu__item-link">
             <sup>01</sup>Home
           </Link>
           <div className="marquee">
@@ -43,11 +25,7 @@ const Navbar = ({ mobileMenuControls, toggleMenu }: INavbarProps) => {
           </div>
         </li>
         <li className="menu__item" id="work-menu">
-          <Link
-            to="/work"
-            className="menu__item-link"
-            onClick={() => toggleMenu()}
-          >
+          <Link to="/work" className="menu__item-link">
             <sup>02</sup>Work
           </Link>
           <div className="marquee">
@@ -66,11 +44,7 @@ const Navbar = ({ mobileMenuControls, toggleMenu }: INavbarProps) => {
           </div>
         </li>
         <li className="menu__item" id="resume-menu">
-          <Link
-            to="/resume"
-            className="menu__item-link"
-            onClick={() => toggleMenu()}
-          >
+          <Link to="/resume" className="menu__item-link">
             <sup>03</sup>Resume
           </Link>
           <div className="marquee">
@@ -151,7 +125,7 @@ const Navbar = ({ mobileMenuControls, toggleMenu }: INavbarProps) => {
           </li>
         </div>
       </ul>
-    </motion.nav>
+    </nav>
   );
 };
 

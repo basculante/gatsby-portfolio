@@ -2,8 +2,6 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 
-import "./resume.scss";
-
 const Resume = () => {
   return (
     <Layout pageTitle="Resume">

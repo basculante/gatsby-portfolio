@@ -1,13 +1,15 @@
-@import "../scss/main";
+@import "../base/typography";
+@import "../abstract/colors";
+@import "../abstract/mixins";
 
-.logo__wrapper {
-  .logo__container {
+.home-logo__wrapper {
+  .home-logo__container {
     height: 32rem;
     width: 32rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 0.8rem;
-    .logo__black-bar {
+    .home-logo__black-bar {
       height: 100%;
       width: 5.6rem;
       background: $black;
@@ -23,13 +25,13 @@
         align-items: center;
       }
     }
-    .logo__profile__picture {
+    .home-logo__profile__picture {
       margin-top: 0;
       transform: translate3d(0%, 20%, 0);
       pointer-events: none;
     }
   }
-  .logo__title {
+  .home-logo__title {
     h1 {
       text-transform: uppercase;
       color: $green;
@@ -37,7 +39,7 @@
     p {
       font-size: 1.4rem;
     }
-    .job-title {
+    .home-logo__job-title {
       color: $blue;
     }
   }

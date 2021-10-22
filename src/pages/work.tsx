@@ -1,8 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-import "./work.scss";
-
 const Work = () => {
   return (
     <Layout pageTitle="Work">

@@ -1,0 +1,107 @@
+@import "../base/typography";
+@import "../abstract/colors";
+@import "../abstract/mixins";
+
+.menu {
+  position: fixed;
+  width: 24rem;
+  height: 100%;
+  font-family: $font-gpkn;
+  overflow: hidden;
+  z-index: $z-index-middle;
+  background: white;
+  padding-top: 1.6rem;
+  @include respond(phone) {
+    display: none;
+  }
+  .menu__item-socials {
+    margin-top: 4rem;
+  }
+  .menu__item {
+    width: 100%;
+    cursor: default;
+    position: relative;
+    .menu__item-link {
+      // display: inline-block;
+      // cursor: pointer;
+      // text-decoration: none;
+      text-transform: uppercase;
+      color: $black;
+      sup {
+        margin-right: 0.8rem;
+        font-size: 1.6rem;
+      }
+    }
+    //Reveal marquee animation on menu item hover
+    &:hover > .marquee {
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .marquee {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: $black;
+      opacity: 0;
+      // transform: translate3d(0, 101%, 0);
+      .marquee__inner-wrap {
+        height: 100%;
+        width: 100%;
+        // transform: translate3d(0, -101%, 0);
+        .marquee__inner {
+          height: 100%;
+          width: fit-content;
+          align-items: center;
+          display: flex;
+          position: relative;
+          animation: marquee 15s linear infinite;
+          will-change: transform;
+          &.email {
+            animation: marquee 25s linear infinite;
+          }
+        }
+        @keyframes marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    //Make even menu items black background;
+    &:nth-child(2n) {
+      .marquee {
+        background: $gold;
+        span {
+          color: $orange-red;
+        }
+      }
+    }
+    .menu__item-link,
+    .marquee span {
+      white-space: nowrap;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      font-weight: 600;
+      padding: 0 0.8rem;
+    }
+    .marquee span {
+      font-family: $font-cocomat;
+      text-align: center;
+      color: $green;
+      font-weight: 400;
+    }
+    .marquee.social {
+      background: white;
+    }
+    .marquee.social span {
+      color: $blue;
+    }
+  }
+}

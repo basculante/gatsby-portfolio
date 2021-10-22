@@ -1,6 +1,8 @@
-@import "../scss/main";
+@import "../base/typography";
+@import "../abstract/colors";
+@import "../abstract/mixins";
 
-.menu-toggle {
+.mobile-menu-toggle {
   display: none; //Hide if non-mobile view;
   position: fixed;
   right: 0;
@@ -11,9 +13,9 @@
   width: 5.6rem;
   border-radius: 0.4rem;
   z-index: $z-index-top; //Put menu toggle on top of everything else
-  .menu-icon {
+  .mobile-menu-icon {
     margin-top: 0.5rem;
-    .black-bar {
+    .mobile-black-bar {
       height: 0.6rem;
       width: 100%;
       background: $black;

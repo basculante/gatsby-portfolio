@@ -1,27 +1,29 @@
-@import "../scss/main";
+@import "../base/typography";
+@import "../abstract/colors";
+@import "../abstract/mixins";
 
-.menu {
+.mobile-menu {
+  display: none;
   position: fixed;
-  width: 24rem;
+  width: 100%;
   height: 100%;
   font-family: $font-gpkn;
   overflow: hidden;
   z-index: $z-index-middle;
   background: white;
   padding-top: 1.6rem;
-  //Mobile view
+  transform: translateX(-100%);
   @include respond(phone) {
-    width: 100%; //Full page menu
-    transform: translateX(-100%);
+    display: block;
   }
-  .menu__item-socials {
+  .mobile-menu__item-socials {
     margin-top: 4rem;
   }
-  .menu__item {
+  .mobile-menu__item {
     width: 100%;
     cursor: default;
     position: relative;
-    .menu__item-link {
+    .mobile-menu__item-link {
       // display: inline-block;
       // cursor: pointer;
       // text-decoration: none;
@@ -32,12 +34,12 @@
         font-size: 1.6rem;
       }
     }
-    //Reveal marquee animation on menu item hover
-    &:hover > .marquee {
+    //Reveal mobile-marquee animation on mobile-menu item hover
+    &:hover > .mobile-marquee {
       opacity: 1;
       transition: opacity 0.25s ease-in-out;
     }
-    .marquee {
+    .mobile-marquee {
       position: absolute;
       top: 0;
       left: 0;
@@ -48,23 +50,23 @@
       background: $black;
       opacity: 0;
       // transform: translate3d(0, 101%, 0);
-      .marquee__inner-wrap {
+      .mobile-marquee__inner-wrap {
         height: 100%;
         width: 100%;
         // transform: translate3d(0, -101%, 0);
-        .marquee__inner {
+        .mobile-marquee__inner {
           height: 100%;
-          width: 100%;
+          width: fit-content;
           align-items: center;
           display: flex;
           position: relative;
-          animation: marquee 5s linear infinite;
+          animation: mobile-marquee 15s linear infinite;
           will-change: transform;
           &.email {
-            animation: marquee 5s linear infinite;
+            animation: mobile-marquee 25s linear infinite;
           }
         }
-        @keyframes marquee {
+        @keyframes mobile-marquee {
           from {
             transform: translateX(0);
           }
@@ -74,37 +76,33 @@
         }
       }
     }
-    //Make even menu items black background;
+    //Make even mobile-menu items black background;
     &:nth-child(2n) {
-      .marquee {
+      .mobile-marquee {
         background: $gold;
         span {
           color: $orange-red;
         }
       }
     }
-    .menu__item-link,
-    .marquee span {
+    .mobile-menu__item-link,
+    .mobile-marquee span {
       white-space: nowrap;
-      font-size: 2.4rem;
       line-height: 1.2;
       font-weight: 600;
       padding: 0 0.8rem;
-      //Mobile view
-      @include respond(phone) {
-        font-size: 4rem;
-      }
+      font-size: 4rem;
     }
-    .marquee span {
+    .mobile-marquee span {
       font-family: $font-cocomat;
       text-align: center;
       color: $green;
       font-weight: 400;
     }
-    .marquee.social {
+    .mobile-marquee.social {
       background: white;
     }
-    .marquee.social span {
+    .mobile-marquee.social span {
       color: $blue;
     }
   }

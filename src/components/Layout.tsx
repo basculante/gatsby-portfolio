@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import React, { useState } from "react";
 import NavToggle from "./NavToggle";
+import Navbar from "./Navbar";
+import MobileNavbar from "./MobileNavbar";
+import Footer from "./Footer";
+
 import { Helmet } from "react-helmet";
 import { useAnimation } from "framer-motion";
-
-import "./Layout.scss";
-import { useWindowSize } from "../hooks/useWindowSize";
 
 interface ILayoutProps {
   pageTitle?: string;
@@ -15,7 +14,6 @@ interface ILayoutProps {
 
 const Layout = ({ pageTitle, children }: ILayoutProps) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const windowSize = useWindowSize();
   const mobileMenuControls = useAnimation();
   const toggleMenu = () => {
     if (menuOpen) {
@@ -27,20 +25,15 @@ const Layout = ({ pageTitle, children }: ILayoutProps) => {
     }
   };
 
-  useEffect(() => {
-    if (windowSize.width > 600) {
-      mobileMenuControls.start("visible");
-    } else {
-      mobileMenuControls.start({ opacity: 0 });
-      setMenuOpen(false);
-    }
-  }, [windowSize.width]);
-
   return (
     <div className="layout__container">
       <Helmet title={`Victor Joh${pageTitle ? ` - ${pageTitle}` : ""}`} />
       <NavToggle toggleMenu={toggleMenu} />
-      <Navbar mobileMenuControls={mobileMenuControls} toggleMenu={toggleMenu} />
+      <Navbar />
+      <MobileNavbar
+        mobileMenuControls={mobileMenuControls}
+        toggleMenu={toggleMenu}
+      />
       <div className="children__container">
         {children}
         <Footer />

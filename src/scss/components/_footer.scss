@@ -1,8 +1,10 @@
-@import "../scss/main";
+@import "../base/typography";
+@import "../abstract/colors";
 
 .footer__container {
   width: 100%;
   margin-top: auto;
+  padding-left: 1.6rem;
   padding-top: 4rem;
   transform: translateY(-1.6rem);
   font-size: 1rem;

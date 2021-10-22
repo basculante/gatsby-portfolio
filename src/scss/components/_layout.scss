@@ -1,4 +1,6 @@
-@import "../scss/main";
+@import "../base/typography";
+@import "../abstract/colors";
+@import "../abstract/mixins";
 
 .layout__container {
   height: 100vh;

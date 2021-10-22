@@ -2,8 +2,6 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
-import "./404.scss";
-
 const NotFoundPage = () => {
   return (
     <main className="container__404">
