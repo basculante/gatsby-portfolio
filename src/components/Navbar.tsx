@@ -11,13 +11,13 @@ interface INavbarProps {
 
 const Navbar = ({ mobileMenuControls, toggleMenu }: INavbarProps) => {
   const mobileMenu = {
-    visible: { x: "0" },
+    visible: { x: "0", opacity: 1 },
     hidden: { x: "-100%" },
   };
   return (
     <motion.nav
       className="menu"
-      // initial="hidden"
+      initial={false}
       animate={mobileMenuControls}
       variants={mobileMenu}
       transition={{ type: "tween" }}

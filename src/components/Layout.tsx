@@ -31,7 +31,7 @@ const Layout = ({ pageTitle, children }: ILayoutProps) => {
     if (windowSize.width > 600) {
       mobileMenuControls.start("visible");
     } else {
-      mobileMenuControls.start("hidden");
+      mobileMenuControls.start({ opacity: 0 });
       setMenuOpen(false);
     }
   }, [windowSize.width]);
@@ -43,7 +43,7 @@ const Layout = ({ pageTitle, children }: ILayoutProps) => {
       <Navbar mobileMenuControls={mobileMenuControls} toggleMenu={toggleMenu} />
       <div className="children__container">
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
