@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import NavToggle from "./NavToggle";
 import { Helmet } from "react-helmet";
 import { useAnimation } from "framer-motion";
-import PerfectScrollbar from "react-perfect-scrollbar";
 
 import "./Layout.scss";
 import { useWindowSize } from "../hooks/useWindowSize";
@@ -39,18 +38,13 @@ const Layout = ({ pageTitle, children }: ILayoutProps) => {
 
   return (
     <div className="layout__container">
-      <PerfectScrollbar>
-        <Helmet title={`Victor Joh${pageTitle ? ` - ${pageTitle}` : ""}`} />
-        <NavToggle toggleMenu={toggleMenu} />
-        <Navbar
-          mobileMenuControls={mobileMenuControls}
-          toggleMenu={toggleMenu}
-        />
-        <div className="children__container">
-          {children}
-          <Footer />
-        </div>
-      </PerfectScrollbar>
+      <Helmet title={`Victor Joh${pageTitle ? ` - ${pageTitle}` : ""}`} />
+      <NavToggle toggleMenu={toggleMenu} />
+      <Navbar mobileMenuControls={mobileMenuControls} toggleMenu={toggleMenu} />
+      <div className="children__container">
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 };
