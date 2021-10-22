@@ -8,11 +8,9 @@
   overflow: hidden;
   z-index: $z-index-middle;
   background: white;
-  
- 
+  padding-top: 1.6rem;
   //Mobile view
   @include respond(phone) {
-    position: fixed;
     width: 100%; //Full page menu
     transform: translateX(-100%);
   }
