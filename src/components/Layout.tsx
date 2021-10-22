@@ -43,7 +43,7 @@ const Layout = ({ pageTitle, children }: ILayoutProps) => {
       <Navbar mobileMenuControls={mobileMenuControls} toggleMenu={toggleMenu} />
       <div className="children__container">
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
