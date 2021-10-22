@@ -7,10 +7,10 @@ const Resume = () => {
     <Layout pageTitle="Resume">
       <section className="resume__container">
         <div>
-          <a href="./resume-10.18.2021.pdf">View as PDF</a>
+          <a href="./resume.pdf">View as PDF</a>
         </div>
         <StaticImage
-          src="../images/resume-10.18.2021.png"
+          src="../images/resume.png"
           alt="resume"
           className="resume-img"
           placeholder="blurred"
