@@ -1,6 +1,7 @@
+import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import "../scss/main.scss";
 
 const NotFoundPage = () => {
   return (
