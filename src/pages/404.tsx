@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import profileImage from "../images/profile-pic-green.png";
 
 import "../scss/main.scss";
 
@@ -8,10 +7,7 @@ const NotFoundPage = () => {
   return (
     <main className="container__404">
       <div>
-        <div
-          className="warning-logo"
-          style={{ backgroundImage: `url(${profileImage})` }}
-        >
+        <div className="warning-logo">
           {/* <StaticImage
             src="../images/profile-pic-green.png"
             alt="profile picture"
