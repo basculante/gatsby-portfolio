@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import { StaticImage } from "gatsby-plugin-image";
 import "../scss/main.scss";
 
 const NotFoundPage = () => {
@@ -8,14 +8,14 @@ const NotFoundPage = () => {
     <main className="container__404">
       <div>
         <div className="warning-logo">
-          {/* <StaticImage
+          <StaticImage
             src="../images/profile-pic-green.png"
             alt="profile picture"
             className="warning-logo-picture"
             height={320}
             width={200}
             layout="fixed"
-          /> */}
+          />
         </div>
         <h1>Are you looking for something else?</h1>
         <h1>

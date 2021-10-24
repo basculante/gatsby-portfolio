@@ -17,6 +17,8 @@
     border-radius: 50%;
     margin-bottom: 4rem;
     overflow: hidden;
-    background-size: cover;
+    .warning-logo-picture {
+      transform: translate3d(0, 10%, 0);
+    }
   }
 }
