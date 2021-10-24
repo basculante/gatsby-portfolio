@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   return (
     <main className="container__404">
       <div>
-        <div className="warning-logo">
+        <div className="warning-logo" style={{ overflow: "hidden" }}>
           <StaticImage
             src="../images/profile-pic-green.png"
             alt="profile picture"
