@@ -14,12 +14,21 @@
   @include respond(phone) {
     display: none;
   }
+  //Make even menu items gold background;
+  a:nth-child(2n) {
+    .marquee {
+      background: $gold;
+      span {
+        color: $orange-red;
+      }
+    }
+  }
   .menu__item-socials {
     margin-top: 4rem;
   }
   .menu__item {
     width: 100%;
-    cursor: default;
+    cursor: pointer;
     position: relative;
     .menu__item-link {
       // display: inline-block;
@@ -58,10 +67,10 @@
           align-items: center;
           display: flex;
           position: relative;
-          animation: marquee 15s linear infinite;
+          animation: marquee 5s linear infinite;
           will-change: transform;
           &.email {
-            animation: marquee 25s linear infinite;
+            animation: marquee 10s linear infinite;
           }
         }
         @keyframes marquee {
@@ -71,15 +80,6 @@
           to {
             transform: translateX(-50%);
           }
-        }
-      }
-    }
-    //Make even menu items black background;
-    &:nth-child(2n) {
-      .marquee {
-        background: $gold;
-        span {
-          color: $orange-red;
         }
       }
     }
