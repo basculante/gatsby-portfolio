@@ -13,7 +13,9 @@ const NotFoundPage = () => {
             src="../images/profile-pic-green.png"
             alt="profile picture"
             className="warning-logo-picture"
-            layout="constrained"
+            height={320}
+            width={200}
+            layout="fixed"
           />
         </div>
         <h1>Are you looking for something else?</h1>
