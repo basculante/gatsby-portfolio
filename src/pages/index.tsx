@@ -11,7 +11,9 @@ const HomePage = () => {
       <main className="homepage__container">
         <HomeLogo />
         <section className="homepage__about-text">
-          I am the lead frontend software engineer at{" "}
+          I am a software engineer at{" "}
+          <a href="https://www.snapraise.com/">Snap! Raise</a>, a company
+          focused on creating digital fundraising platforms for high schools. Previously, I was the lead frontend software engineer at{" "}
           <a href="https://voicegain.ai">Voicegain</a>, a speech-to-text focused
           startup in Dallas. I graduated with a B.A. in Chemistry from{" "}
           <a href="https://www.nyu.edu/">NYU</a>. I enjoy bringing an analytical

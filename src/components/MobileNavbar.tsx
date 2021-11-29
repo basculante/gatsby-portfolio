@@ -32,7 +32,7 @@ const MobileNavbar = ({
           >
             <sup>01</sup>Home
           </Link>
-          <div className="mobile-marquee">
+          {/* <div className="mobile-marquee">
             <div className="mobile-marquee__inner-wrap">
               <div className="mobile-marquee__inner" aria-hidden="true">
                 {Array(32)
@@ -45,7 +45,7 @@ const MobileNavbar = ({
                   ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
         <li className="mobile-menu__item" id="mobile-work-menu">
           <Link
@@ -55,7 +55,7 @@ const MobileNavbar = ({
           >
             <sup>02</sup>Work
           </Link>
-          <div className="mobile-marquee">
+          {/* <div className="mobile-marquee">
             <div className="mobile-marquee__inner-wrap">
               <div className="mobile-marquee__inner" aria-hidden="true">
                 {Array(32)
@@ -68,7 +68,7 @@ const MobileNavbar = ({
                   ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
         <li className="mobile-menu__item" id="mobile-resume-menu">
           <Link
@@ -78,7 +78,7 @@ const MobileNavbar = ({
           >
             <sup>03</sup>Resume
           </Link>
-          <div className="mobile-marquee">
+          {/* <div className="mobile-marquee">
             <div className="mobile-marquee__inner-wrap">
               <div className="mobile-marquee__inner" aria-hidden="true">
                 {Array(32)
@@ -91,7 +91,7 @@ const MobileNavbar = ({
                   ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
         <li className="mobile-menu__item" id="mobile-contact-menu">
           <a
@@ -100,7 +100,7 @@ const MobileNavbar = ({
           >
             <sup>04</sup>Email
           </a>
-          <div className="mobile-marquee">
+          {/* <div className="mobile-marquee">
             <div className="mobile-marquee__inner-wrap">
               <div className="mobile-marquee__inner email" aria-hidden="true">
                 {Array(32)
@@ -113,7 +113,7 @@ const MobileNavbar = ({
                   ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
         <div className="mobile-menu__item-socials">
           <li className="mobile-menu__item" id="mobile-contact-menu">
@@ -123,7 +123,7 @@ const MobileNavbar = ({
             >
               GitHub
             </a>
-            <div className="mobile-marquee social">
+            {/* <div className="mobile-marquee social">
               <div className="mobile-marquee__inner-wrap">
                 <div className="mobile-marquee__inner" aria-hidden="true">
                   {Array(32)
@@ -136,7 +136,7 @@ const MobileNavbar = ({
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
           <li className="mobile-menu__item" id="mobile-contact-menu">
             <a
@@ -145,7 +145,7 @@ const MobileNavbar = ({
             >
               LinkedIn
             </a>
-            <div className="mobile-marquee social">
+            {/* <div className="mobile-marquee social">
               <div className="mobile-marquee__inner-wrap">
                 <div className="mobile-marquee__inner" aria-hidden="true">
                   {Array(32)
@@ -158,7 +158,7 @@ const MobileNavbar = ({
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
         </div>
       </ul>

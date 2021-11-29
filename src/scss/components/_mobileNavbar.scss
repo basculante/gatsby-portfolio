@@ -29,6 +29,9 @@
       // text-decoration: none;
       text-transform: uppercase;
       color: $black;
+      &:hover {
+        color: $blue;
+      }
       sup {
         margin-right: 0.8rem;
         font-size: 1.6rem;

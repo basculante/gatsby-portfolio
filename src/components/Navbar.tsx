@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="menu__item-link">
               <sup>01</sup>Home
             </div>
-            <div className="marquee">
+            {/* <div className="marquee">
               <div className="marquee__inner-wrap">
                 <div className="marquee__inner" aria-hidden="true">
                   {Array(8)
@@ -23,7 +23,7 @@ const Navbar = () => {
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
         </Link>
         <Link to="/work">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="menu__item-link">
               <sup>02</sup>Work
             </div>
-            <div className="marquee">
+            {/* <div className="marquee">
               <div className="marquee__inner-wrap">
                 <div className="marquee__inner" aria-hidden="true">
                   {Array(8)
@@ -44,7 +44,7 @@ const Navbar = () => {
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
         </Link>
         <Link to="/resume">
@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="menu__item-link">
               <sup>03</sup>Resume
             </div>
-            <div className="marquee">
+            {/* <div className="marquee">
               <div className="marquee__inner-wrap">
                 <div className="marquee__inner" aria-hidden="true">
                   {Array(8)
@@ -65,7 +65,7 @@ const Navbar = () => {
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
         </Link>
         <a href="mailto:wantechjoh@gmail.com">
@@ -73,7 +73,7 @@ const Navbar = () => {
             <div className="menu__item-link">
               <sup>04</sup>Email
             </div>
-            <div className="marquee">
+            {/* <div className="marquee">
               <div className="marquee__inner-wrap">
                 <div className="marquee__inner email" aria-hidden="true">
                   {Array(8)
@@ -86,14 +86,14 @@ const Navbar = () => {
                     ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </li>
         </a>
         <div className="menu__item-socials">
           <a href="https://github.com/basculante">
             <li className="menu__item" id="contact-menu">
               <div className="menu__item-link">GitHub</div>
-              <div className="marquee social">
+              {/* <div className="marquee social">
                 <div className="marquee__inner-wrap">
                   <div className="marquee__inner" aria-hidden="true">
                     {Array(8)
@@ -106,13 +106,13 @@ const Navbar = () => {
                       ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </li>
           </a>
           <a href="https://www.linkedin.com/in/victor-wan-teak-joh-924203ba/">
             <li className="menu__item" id="contact-menu">
               <div className="menu__item-link">LinkedIn</div>
-              <div className="marquee social">
+              {/* <div className="marquee social">
                 <div className="marquee__inner-wrap">
                   <div className="marquee__inner" aria-hidden="true">
                     {Array(8)
@@ -125,7 +125,7 @@ const Navbar = () => {
                       ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </li>
           </a>
         </div>

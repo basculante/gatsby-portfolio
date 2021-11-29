@@ -39,8 +39,8 @@ const HomeLogo = () => {
       <section className="home-logo__title">
         <h1>victor joh</h1>
         <p>
-          <b className="home-logo__job-title">Frontend Software Engineer</b> /
-          React / Typescript
+          <b className="home-logo__job-title">Software Engineer</b> /
+          Node / React 
         </p>
       </section>
     </div>
