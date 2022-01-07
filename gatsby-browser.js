@@ -8,8 +8,7 @@ export function wrapPageElement({ element, props }) {
     else if (props.path.includes("resume")) return "Resume";
     else return null;
   };
-  console.log(props);
-  console.log(renderTitle());
+
   return (
     <Layout {...props} pageTitle={renderTitle()}>
       {element}
